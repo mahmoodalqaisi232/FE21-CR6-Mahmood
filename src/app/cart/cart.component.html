@@ -1,0 +1,44 @@
+<h3 class="ps-1 bg-dark text-white fs-2 w-50 m-auto my-3">Cart</h3>
+<table class="table w-50 m-auto">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody class="cart-item" *ngFor="let item of items; index as itemIndex">
+    <tr>
+      <th scope="row">{{ itemIndex }}</th>
+      <td>{{ item.destination }}</td>
+      <td>{{ item.price }}€</td>
+    
+    </tr>
+  </tbody>
+  <button (click)="calculateCosts()">
+    <span id="costs">Total</span>
+  </button>
+</table>
+
+<br />
+
+<form
+  [formGroup]="checkoutForm"
+  (ngSubmit)="onSubmit(checkoutForm.value)"
+  class="container-fluid rounded w-50 bg-secondary text-center"
+>
+  <div>
+    <label for="name" class="me-3 my-4 fw-bold"> Name </label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+  <div>
+    <label for="address" class="me-1 mb-4 fw-bold"> Address </label>
+    <input id="address" type="text" formControlName="address" />
+  </div>
+
+  <div>
+    <label for="email" class="me-4 mb-3 fw-bold"> Email </label>
+    <input id="email" type="text" formControlName="emailAddress" />
+  </div>
+  <button class="btn btn-success ms-5 mb-2" type="submit">Purchase</button>
+</form>

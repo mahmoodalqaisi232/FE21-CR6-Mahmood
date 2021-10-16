@@ -1,0 +1,9 @@
+
+.homeBg{
+    position: relative;
+    height: 90vh;
+    background-image: url("/assets/images/bghome.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

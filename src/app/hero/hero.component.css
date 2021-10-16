@@ -1,0 +1,9 @@
+.card{
+    position:absolute!important;
+    
+    height: 20vh!important;
+    background: none;
+    top:21%;
+    left: 15%;
+    border:none;
+}
