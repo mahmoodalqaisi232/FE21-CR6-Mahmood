@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  texts: any= document.getElementsByClassName("descriptions");
+  texts:any= document.getElementsByClassName("descriptions");
 
-  list=[{
+  list:any =[{
     name:"Travel Insucrance",
     description:"Travelex travel insurance can cover a wide variety of incidents, mishaps, and activities. Dependent on which plan you choose, you can receive coverage for trip delays, trip cancellations, delayed baggage, adventure sports, and more."
   },{
@@ -23,12 +23,6 @@ export class ContentComponent implements OnInit {
     description:"Since Travelex Travels and Tours began in 2002, we’ve created unforgettable travel experiences for thousands of clients from all over the world.",
   }]
 
-  
-  showDescription(){
-    for(let i =0; i<this.list.length;i++){
-    (this.texts[i]as HTMLElement).innerHTML = this.list[i].description;
-  }
-  }
 
   constructor() {}
 

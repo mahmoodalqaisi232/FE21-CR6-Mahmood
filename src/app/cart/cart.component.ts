@@ -31,11 +31,5 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
   }
+}
 
-  calculateCosts(){
-    for( let val of items){
-      sum=0;
-      
-    }
-   }
-  
