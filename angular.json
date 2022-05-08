@@ -28,9 +28,10 @@
             ],
             "styles": [
               "node_modules/animate.css/animate.min.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {

@@ -21,6 +21,7 @@
     "@angular/router": "~12.2.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
     "awesome": "^0.0.7",
     "bootstrap": "^5.1.3",
     "rxjs": "~6.6.0",

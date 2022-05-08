@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit(): void {
+   }
+
+   showNav(){
+    let myNav:HTMLElement = document.querySelector('#myNav');
+  window.onscroll = ()=>{
+    document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150 ?
+    myNav.classList.add("navBg"): myNav.classList.remove("navBg")
+  }
   }
 
+  ngOnInit(): void {
+    this.showNav();
+  }
 }

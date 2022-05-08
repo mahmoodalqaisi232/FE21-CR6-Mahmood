@@ -1,4 +1,102 @@
-.card-img{
-    height: 100%!important;
-    object-fit: contain!important;
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap');
+*{
+    font-family:'Saira', sans-serif;
+    font-weight: bold;
 }
+.list-item{
+    font-size: 1.4vw;
+    cursor: pointer;
+    color: rgb(34, 48, 88);
+    text-decoration: underline;
+    text-underline-offset: 7px;
+
+}
+.list-item:hover{
+    color: brown;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+#left-list-description{
+    font-size: 1.4vw;
+    text-align:justify;
+}
+.card-content-1{
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+}
+.card-left{
+    width: 60%;
+}
+.card-right{
+    width: 40%;
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+}
+/* tiny screens */
+@media screen and (max-width:320px) {
+    .list-item{
+        font-size: 2.8vw;
+    }
+    #left-list-description{
+        font-size: 3vw;
+    }
+    .card-content-1{
+        flex-direction: column-reverse;
+    }
+    .card-right{
+        width: 100%;
+    }
+    .card-left{
+        width: 100%;
+    }
+}
+/* small screens */
+@media screen and (min-width:375px) and (max-width:424px) {
+    .list-item{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+    }
+    #left-list-description{
+        font-size: 3vw;
+    }
+    .card-content-1{
+        flex-direction: column-reverse;
+    }
+    .card-right{
+        width: 100%;
+    }
+    .card-left{
+        width: 100%;
+    }
+}
+/* Mobile */
+@media screen and (min-width:425px) and (max-width:767px) {
+    .list-item{
+        font-size: 3vw;
+    }
+    #left-list-description{
+        font-size: 3vw;
+    }
+    .card-content-1{
+        flex-direction: column-reverse;
+    }
+    .card-right{
+        width: 100%;
+    }
+    .card-left{
+        width: 100%;
+    }
+}
+/* Tablet */
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .list-item{
+        font-size: 1.5vw;
+    }
+}
+/* animate__animated  animate__slideInLeft animate__delay-1s */

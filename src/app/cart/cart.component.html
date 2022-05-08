@@ -2,30 +2,27 @@
 <table class="table w-50 m-auto">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Item</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Quantitty</th>
       <th scope="col">Price</th>
     </tr>
   </thead>
-  <tbody class="cart-item" *ngFor="let item of items; index as itemIndex">
-    <tr>
-      <th scope="row">{{ itemIndex }}</th>
-      <td>{{ item.destination }}</td>
-      <td>{{ item.price }}€</td>
-    
-    </tr>
+  <tbody id="cart-container">
   </tbody>
-  <button >
-    <span id="costs">Total</span>
-  </button>
+  <tfoot class="d-flex mt-4 border-0 w-100 m-auto justify-content-end">
+    <button class="btn btn-success">Total</button>
+    <span id="total" class="mx-3 pt-2 fw-bold">0.00€</span>
+    <button class="btn btn-danger  text-end" id="clear-cart" (click)="clearCart()">clear all</button>
+  </tfoot>
 </table>
-
-<br />
+<h3 class="ps-5 text-center"> 
+</h3>
+<br/>
 
 <form
   [formGroup]="checkoutForm"
   (ngSubmit)="onSubmit(checkoutForm.value)"
-  class="container-fluid rounded w-50 bg-secondary text-center"
+  class="container-fluid rounded w-50 bg-dark text-center text-white"
 >
   <div>
     <label for="name" class="me-3 my-4 fw-bold"> Name </label>

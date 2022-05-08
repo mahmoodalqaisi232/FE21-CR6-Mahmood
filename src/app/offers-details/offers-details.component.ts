@@ -10,21 +10,19 @@ import { CartService } from '../cart.service';
   styleUrls: ['./offers-details.component.css']
 })
 export class OffersDetailsComponent implements OnInit {
+  items:any;
    product:any;
   constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   addToCart(product) {
-
     window.alert('Your product has been added to the cart!');
-
     this.cartService.addToCart(product);
-
   }
   ngOnInit(): void {
       this.route.paramMap.subscribe(params => {
       let id : any = params.get('offersID');
       this.product = offers[id];
-  
+      this.items=this.cartService.getItems();
     });
   }
 

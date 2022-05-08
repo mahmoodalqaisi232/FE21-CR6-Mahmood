@@ -1,16 +1,14 @@
 <div class="container-fluid mt-5">
 <div class="row g-md-1">
-
-<div class="card col-md-6 col-lg-4 border g-3" *ngFor="let val of offers;index as offersID">
+<div class="card col-md-6 col-lg-4 border g-3" *ngFor="let val of offers;index as offersID" data-aos="fade-up">
     <img src="assets/images/{{val.image}}" class="card-img-top rounded  h-50" alt="{{val.destination}}">
     <div class="card-body">
         <h5 class="card-title">{{val.destination}}</h5>
-        <!-- <p class="card-text"> {{val.description}}</p> -->
-        <p class="card-text fw-bold"> Start Date: {{val.startDate}} - Duration: {{val.duration }} </p>
-        <p class="card-text text-success fs-3"> Price: {{val.price}}€</p>
+        <p class="card-text fw-bold "> Start Date: {{val.startDate}} - Duration: {{val.duration }} </p>
+        <p class="card-text text-success fs-5"> Price: {{val.price}}€</p>
     </div>
     <div class="card-footer border">
-        <button  class="btn btn-success me-1" (click)="addToCart(val)"> Add to Cart now !</button>
+        <button class="btn btn-success me-1" (click)="addToCart(val)"> Add to Cart</button>
         <button class="btn btn-primary me-1" routerLink="/travels/{{offersID}}"> More details</button>
         <button class="btn btn-dark" routerLink="/cart"> Show Cart</button>
     </div>
